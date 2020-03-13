@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/SceneChangeButtonn.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Universal Serif.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 22
+font_data = ExtResource( 2 )
+
+[node name="SceneChangeButton" type="Button"]
+margin_top = 36.0
+margin_right = 185.0
+margin_bottom = 68.0
+custom_fonts/font = SubResource( 1 )
+text = "Main Screen"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="button_up" from="." to="." method="_on_button_up"]
