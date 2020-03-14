@@ -19,8 +19,8 @@ func _on_Timer_timeout():
 	if randf() < fire_probability:
 		var b = Fire.instance()
 		b.position = position
-		b.position.y += 25
-		get_node("/root/Game/Fire").add_child(b)
+		b.position.x -= 40
+		get_node("/root/Level/Fire").add_child(b)
 
 
 func die() -> void:

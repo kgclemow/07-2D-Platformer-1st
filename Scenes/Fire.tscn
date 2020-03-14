@@ -6,10 +6,15 @@
 [node name="Fire" type="Node2D"]
 
 [node name="Fire" type="RigidBody2D" parent="."]
+collision_layer = 4
+gravity_scale = 0.0
+linear_velocity = Vector2( -100, 0 )
+linear_damp = 0.0
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
 }
+speed = 300
 
 [node name="Sprite" type="Sprite" parent="Fire"]
 position = Vector2( 0.568848, -4.24998 )

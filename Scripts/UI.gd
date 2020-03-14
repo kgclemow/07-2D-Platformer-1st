@@ -40,3 +40,8 @@ func set_paused(value: bool) -> void:
 	paused = value
 	scene_tree.paused = value
 	pause_overlay.visible = value
+
+
+func _on_Player_score_changed():
+	var s = get_node("/root/Level/Player").score
+	score_label.text = "Score: %d" % s
