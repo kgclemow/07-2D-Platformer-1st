@@ -9,7 +9,7 @@
 [ext_resource path="res://Scenes/Enemy.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/Portal.tscn" type="PackedScene" id=8]
 
-[node name="Level 2" type="Node2D"]
+[node name="Level" type="Node2D"]
 
 [node name="Sky" type="TextureRect" parent="."]
 margin_left = -337.79
@@ -270,3 +270,5 @@ next_scene = ExtResource( 5 )
 [node name="Portal3" parent="." instance=ExtResource( 8 )]
 position = Vector2( -132.135, -88.0898 )
 next_scene = ExtResource( 5 )
+
+[node name="Fire" type="Node2D" parent="."]

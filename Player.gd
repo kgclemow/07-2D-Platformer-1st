@@ -9,6 +9,12 @@ var speed = 400
 var gravity = 40
 var jump_force = -1000
 
+signal score_changed
+
+func _ready():
+	emit_signal("score_changed")
+
+
 
 func _physics_process(delta):
 	motion.y += gravity #increase y value by 10 acting as gravity
@@ -32,6 +38,13 @@ func _physics_process(delta):
 			$Body.scale.x = move_direction #change direction player is facing when moves
 	# 
 	motion = move_and_slide(motion, UP)
+
+
+func score_lowered(s):
+	score -= s
+	print(score)
+	emit_signal("score_changed")
+
 
 func die() -> void:
 	PlayerData.deaths += 1
